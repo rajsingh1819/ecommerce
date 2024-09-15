@@ -294,7 +294,7 @@ function Order() {
             </div>
             <div className="note">
               <span>*Note : </span>
-              <div>
+              <div className="note-underItem">
                 <p className="mx-1">  Subtotal = Price +(Tex + Shipping)</p>
                 <p className="mx-1">  Price = Price * Quantity</p>
 

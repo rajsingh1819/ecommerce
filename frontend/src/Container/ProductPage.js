@@ -31,7 +31,7 @@ function ProductPage() {
 
 
   const getProductData = async () => {
-    const getApi = `http://localhost:8000/product/${category}/${id}`;
+    const getApi = `https://ecommerce-backend-odsg.onrender.com/product/${category}/${id}`;
     try {
       let response = await fetch(getApi);
       response = await response.json();
@@ -99,7 +99,7 @@ function ProductPage() {
       } else {
         const data = { username: userInfo.username, userId: userInfo._id, reviewText, rating };
 
-        const reviewApi = `http://localhost:8000/reviews/post/${id}`;
+        const reviewApi = `https://ecommerce-backend-odsg.onrender.com/reviews/post/${id}`;
 
         try {
           const response = await fetch(reviewApi, {
@@ -134,7 +134,7 @@ function ProductPage() {
   // Function to delete a review
   const deleteReview = async (reviewId) => {
     try {
-      const response = await fetch(`http://localhost:8000/reviews/delete/${reviewId}`, {
+      const response = await fetch(`https://ecommerce-backend-odsg.onrender.com/reviews/delete/${reviewId}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -204,7 +204,8 @@ function ProductPage() {
 
     }
     else {
-      userReviews("User not login!", "info");
+      userReviews("User is not logged in!", "error");
+      navigate("/login");
 
     }
   }

@@ -14,7 +14,7 @@ function About() {
           <h6>
             Developed by : <span> Raj Singh</span>
           </h6>
-          <h6 className="contactUS">Contact US</h6>
+          <p>Project link is here : Click Github &#128071;</p>
           <div className="usericonSection mb-2">
             <a
               href="https://github.com/rajsingh1819/ecommerse"
