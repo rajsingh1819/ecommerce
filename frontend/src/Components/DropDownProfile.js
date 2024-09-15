@@ -30,7 +30,7 @@ function DropDownProfile() {
       const token = localStorage.getItem('authToken');
       const decodedToken = jwtDecode(token);
       const userId = decodedToken.userId;
-      const userApi = `http://localhost:8000/user/${userId}`;
+      const userApi = `https://ecommerce-backend-odsg.onrender.com/user/${userId}`;
       const response = await fetch(userApi);
       const data = await response.json();
       setProfileData(data);

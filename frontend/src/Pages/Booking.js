@@ -124,7 +124,7 @@ const Booking = () => {
     };
 
     try {
-      const api = "http://localhost:8000/booking/api/create";
+      const api = "https://ecommerce-backend-odsg.onrender.com/booking/api/create";
       const response = await fetch(api, {
         method: "POST",
         headers: {

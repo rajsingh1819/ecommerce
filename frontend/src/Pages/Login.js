@@ -44,7 +44,7 @@ function Login({ showForm, setShowForm, setForgotAction }) {
     const { emailOrUsername, password, rememberMe } = formData;
 
     try {
-      const loginApi = "http://localhost:8000/user/login";
+      const loginApi = "https://ecommerce-backend-odsg.onrender.com/user/login";
       const response = await fetch(loginApi, {
         method: "POST",
         headers: {

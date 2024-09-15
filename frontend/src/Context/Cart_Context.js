@@ -84,7 +84,7 @@ const CartProvider = ({ children }) => {
   // get all data from backend
   const getAllApi = async () => {
     try {
-      let response = await fetch("http://localhost:8000/product/getAll");
+      let response = await fetch("https://ecommerce-backend-odsg.onrender.com/product/getAll");
       response = await response.json();
       setProductData(response.data);
     } catch (error) {

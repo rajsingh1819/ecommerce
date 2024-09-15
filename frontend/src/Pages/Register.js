@@ -76,7 +76,7 @@ function Register({ showForm, setShowForm }) {
       return false;
     }
 
-    const registerApi = "http://localhost:8000/user/register";
+    const registerApi = "https://ecommerce-backend-odsg.onrender.com/user/register";
     try {
       const response = await fetch(registerApi, {
         method: "POST",

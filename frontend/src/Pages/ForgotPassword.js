@@ -79,7 +79,7 @@ function ForgotPassword({ setForgotAction }) {
     const { email } = formData;
 
     try {
-      const response = await fetch("http://localhost:8000/user/check-email", {
+      const response = await fetch("https://ecommerce-backend-odsg.onrender.com/user/check-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -115,7 +115,7 @@ function ForgotPassword({ setForgotAction }) {
     }
 
     try {
-      const response = await fetch("http://localhost:8000/user/update-password", {
+      const response = await fetch("https://ecommerce-backend-odsg.onrender.com/user/update-password", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

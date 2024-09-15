@@ -95,7 +95,7 @@ function Order() {
     }
 
     try {
-      const api = `http://localhost:8000/booking/api/delete/${bookingId}/product/${productId}`;
+      const api = `https://ecommerce-backend-odsg.onrender.com/booking/api/delete/${bookingId}/product/${productId}`;
       const response = await fetch(api, { method: "DELETE" });
 
       if (response.ok) {
