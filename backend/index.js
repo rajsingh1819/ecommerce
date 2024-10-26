@@ -14,14 +14,10 @@ app.use(express.json());
 require("dotenv").config();
 const port = process.env.PORT  || 8000;
 
-mongoose
-  .connect(process.env.DB)
-  .then(() => {
-    console.log("Connected to MongoDB");
-  })
-  .catch((error) => {
-    console.log("Error Connecting to MongoDB");
-  });
+mongoose.connect(process.env.DB)
+  .then(() => console.log("Connected to MongoDB"))
+  .catch((error) => console.error("Error Connecting to MongoDB:", error.message));
+
 
 app.listen(port, () => {
   console.log("server is running on port 8000...");
