@@ -14,7 +14,7 @@ app.use(express.json());
 require("dotenv").config();
 const port = process.env.PORT  || 8000;
 
-mongoose.connect(process.env.DB || "mongodb+srv://rajsingh123:ILktg7fLTQLsamDg@cluster0.yrn2k.mongodb.net/")
+mongoose.connect("mongodb+srv://rajsingh123:ILktg7fLTQLsamDg@cluster0.yrn2k.mongodb.net/")
   .then(() => console.log("Connected to MongoDB"))
   .catch((error) => console.error("Error Connecting to MongoDB:", error.message));
 
